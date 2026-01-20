@@ -1,6 +1,6 @@
 # Raizes do Amanhã: Educação, cidadania e oportunidades para crianças e adolescentes
 ## Subtema
-Tratando do subtema _Desigualdade Social_, o projeto _Raízes do Amanhã_ tem como objetivo apoiar o acesso a educação para crianças e adolescentes em situação de vulnerabilidade social. Ele busca combatê-la.
+Tratando do subtema _Desigualdade Social_, o projeto _Raízes do Amanhã_ tem como objetivo apoiar o acesso a educação para crianças e adolescentes em situação de vulnerabilidade social.
 
 ## Relação com geografia
 A desigualdade social constitui uma das principais características do espaço geográfico urbano brasileiro. Segundo a Geografia, o espaço urbano não é produzido de forma homogênea, mas sim como resultado das relações econômicas, políticas e sociais que organizam a cidade e definem onde se concentram os investimentos, os serviços e as oportunidades.
