@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
+<body class="h-screen">
 
 <header class="flex items-center p-2">
 
@@ -17,20 +17,53 @@
         <img src="logo.png" alt="">
     </div>
 
-    <nav class="flex text-xl text-emerald-800 gap-10 text-emerald-800 justify-center flex-1">
+    <nav class="flex text-xl text-emerald-800 gap-10 text-emerald-800 justify-center flex-1 font-bold">
         <a href="#">Início</a>
         <a href="#">Cursos</a>
         <a href="#">Dashboard</a>
     </nav>
 
-    <div class="flex justify-end flex-1 gap-2">
-        <button class="btn bg-white border-2 border-emerald-800 text-emerald-800">Entrar</button>
-        <button class="btn bg-emerald-800 text-white">Registre-se</button>
+    <div class="flex justify-end flex-1 gap-2 ">
+        <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">Entrar</button>
+        <button class="btn bg-emerald-800 text-white font-bold">Registre-se</button>
     </div>
 
 </header>
 
-<main></main>
+<main class="bg-gray-100 flex-1">
+    
+    <span class="flex text-emerald-800 justify-between h-full">
+
+        <div class="flex flex-col gap-6 my-auto ml-20 w-1/3">
+            <p class="text-2xl font-medium">Você já parou pra notar como o ensino funciona em regiões periféricas?</p>
+            <h1 class="text-5xl font-bold">O projeto Raízes do Amanhã está aqui para trazer a transformação</h1>
+            <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+        </div>
+
+        <div class="mr-20">
+            <div class="hover-3d">
+                
+                <figure>
+                  <img src="logopb.png" alt="3D card" />
+                </figure>
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+        </div>
+
+    </span>
+
+</main>
+
+
 <footer></footer>
 
 </body>
