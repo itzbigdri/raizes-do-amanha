@@ -7,62 +7,130 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
 </head>
-<body class="h-screen">
+
+<body class="min-h-screen flex flex-col">
 
 <header class="flex items-center p-2">
-
     <div class="flex flex-1">
         <img src="logo.png" alt="">
     </div>
 
-    <nav class="flex text-xl text-emerald-800 gap-10 text-emerald-800 justify-center flex-1 font-bold">
+    <nav class="flex text-xl gap-10 justify-center flex-1 font-bold text-emerald-800">
         <a href="#">Início</a>
         <a href="#">Cursos</a>
         <a href="#">Dashboard</a>
     </nav>
 
-    <div class="flex justify-end flex-1 gap-2 ">
-        <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">Entrar</button>
-        <button class="btn bg-emerald-800 text-white font-bold">Registre-se</button>
+    <div class="flex justify-end flex-1 gap-2">
+        <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
+            Entrar
+        </button>
+        <button class="btn bg-emerald-800 text-white font-bold">
+            Registre-se
+        </button>
     </div>
-
 </header>
 
-<main class="bg-gray-100 flex-1">
-    
-    <span class="flex text-emerald-800 justify-between h-full">
+<main class="flex flex-col flex-1">
 
-        <div class="flex flex-col gap-6 my-auto ml-20 w-1/3">
-            <p class="text-2xl font-medium">Você já parou pra notar como o ensino funciona em regiões periféricas?</p>
-            <h1 class="text-5xl font-bold">O projeto Raízes do Amanhã está aqui para trazer a transformação</h1>
-            <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <div class="flex flex-col flex-1 text-emerald-800">
 
+        <div class="flex flex-1 items-center justify-between px-20">
+
+            <section class="flex flex-col gap-8 w-2/5">
+                <p class="text-2xl font-medium">
+                    Você já parou pra notar como o ensino funciona em regiões periféricas?
+                </p>
+
+                <h1 class="text-5xl font-bold">
+                    O projeto Raízes do Amanhã está aqui para trazer a transformação
+                </h1>
+
+                <div class="flex flex-col gap-2">
+                    <p>"Mas por qual motivo eu deveria me importar com isso?"</p>
+
+                    <p class="text-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore soluta itaque rem nemo, quos neque porro obcaecati mollitia quaerat pariatur deserunt dolor quod, dolore provident?
+                    </p>
+                </div>
+            </section>
+
+            <figure>
+                <img src="logopb.png" alt="">
+            </figure>
         </div>
 
-        <div class="mr-20">
-            <div class="hover-3d">
-                
-                <figure>
-                  <img src="logopb.png" alt="3D card" />
-                </figure>
+        <svg class="text-emerald-800" viewBox="0 0 1440 156" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 29.6407L40 45.6407C80 61.6407 160 93.6407 240 88.3407C320 82.6407 400 40.6408 480 18.9408C560 -2.35925 640 -2.35925 720 2.94075C800 8.64075 880 18.6408 960 34.9408C1040 50.6408 1120 72.6407 1200 72.3407C1280 72.6407 1360 50.6407 1400 40.3407L1440 29.6407V157.641H1400C1360 157.641 1280 157.641 1200 157.641C1120 157.641 1040 157.641 960 157.641C880 157.641 800 157.641 720 157.641C640 157.641 560 157.641 480 157.641C400 157.641 320 157.641 240 157.641C160 157.641 80 157.641 40 157.641H0V29.6407Z"/>
+        </svg>
 
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+    </div>
+
+    <div class="flex flex-col flex-1 bg-emerald-800 text-white">
+        
+        <div class="flex flex-1 items-center justify-between px-20">
+
+            <figure>
+                <img src="placeholder.png" alt="">
+            </figure>
+
+            <section class="flex flex-col gap-8 w-2/5">
+                <p class="text-2xl font-medium">
+                    Você já parou pra notar como o ensino funciona em regiões periféricas?
+                </p>
+
+                <h1 class="text-5xl font-bold">
+                    O projeto Raízes do Amanhã está aqui para trazer a transformação
+                </h1>
+
+                <div class="flex flex-col gap-2">
+                    <p>"Mas por qual motivo eu deveria me importar com isso?"</p>
+
+                    <p class="text-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore soluta itaque rem nemo, quos neque porro obcaecati mollitia quaerat pariatur deserunt dolor quod, dolore provident?
+                    </p>
+                </div>
+            </section>
+
+        </div>
+            
+    </div>
+
+    <svg class="text-emerald-800" viewBox="0 0 1440 158" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 128L40 112C80 96 160 64 240 69.3C320 75 400 117 480 138.7C560 160 640 160 720 154.7C800 149 880 139 960 122.7C1040 107 1120 85 1200 85.3C1280 85 1360 107 1400 117.3L1440 128V0H1400C1360 0 1280 0 1200 0C1120 0 1040 0 960 0C880 0 800 0 720 0C640 0 560 0 480 0C400 0 320 0 240 0C160 0 80 0 40 0H0V128Z"/>
+    </svg>
+
+    <div class="flex flex-col flex-1 text-emerald-800">
+
+        <div class="flex flex-1 items-center justify-between px-20">
+
+            <section class="flex flex-col gap-8 w-2/5">
+                <p class="text-2xl font-medium">
+                    Você já parou pra notar como o ensino funciona em regiões periféricas?
+                </p>
+
+                <h1 class="text-5xl font-bold">
+                    O projeto Raízes do Amanhã está aqui para trazer a transformação
+                </h1>
+
+                <div class="flex flex-col gap-2">
+                    <p>"Mas por qual motivo eu deveria me importar com isso?"</p>
+
+                    <p class="text-xl">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore soluta itaque rem nemo, quos neque porro obcaecati mollitia quaerat pariatur deserunt dolor quod, dolore provident?
+                    </p>
+                </div>
+            </section>
+
+            <figure>
+                <img src="logopb.png" alt="">
+            </figure>
         </div>
 
-    </span>
+    </div>
 
 </main>
-
 
 <footer></footer>
 
