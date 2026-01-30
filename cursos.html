@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto - Raizes do Amanhã</title>
-
+    <title>Cursos</title>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -14,46 +12,85 @@
 
 <body class="min-h-screen flex flex-col">
 
-<header class="flex items-center p-2">
-    <div class="flex flex-1">
-        <img src="imagenscursos/logo.png" alt="">
-    </div>
+<header x-data="{}">
+    <div class="flex justify-between w-7xl max-w-9/10 py-4 mx-auto">
+        <a href="index.html"><img src="./assets/img/logo-raizes.png" alt=""></a>
 
-    <nav class="flex text-xl gap-10 justify-center flex-1 font-bold text-emerald-800">
-        <a href="#">Início</a>
-        <a href="#">Cursos</a>
-        <a href="#">Dashboard</a>
-    </nav>
-
-    <div class="flex justify-end flex-1 gap-2">
-
-        <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
-            Entrar
-        </button>
-
-        <button class="btn bg-emerald-800 text-white font-bold">
-            Registre-se
-        </button>
-
+        <div class="flex gap-16 items-center">
+            <nav class="text-md text-[#335545] flex gap-8">
+                <a href="index.html">Início</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="dashboard.html">Dashboard</a>
+            </nav>
+            
+            <!-- Interações Admin -->
+            <div class="flex justify-end flex-1 gap-8">
+                <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
+                    Acessar painel
+                </button>
+                <img src="assets/icons/logout.svg" alt="" class="w-8">
+            </div>
+        </div>
     </div>
 </header>
 
-<main class="flex flex-col flex-1 bg-base-300">
+<div x-data="{modal: false, aviso: false}">
+    <div x-show="aviso" role="alert" class="alert alert-success max-w-9/10 mx-auto">
+        <span>Curso enviado para verificação</span>
+    </div>
+    <section x-show="modal" class="bg-stone-900/40 fixed w-full h-screen z-1 left-0 top-0 flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg">
+            <h3 class="text-xl font-bold">Cadastre seu curso</h3>
+            <form class="w-75">
 
-    <div class="flex flex-col flex-1 gap-12 ">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Nome do criador<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="text" class="input" required>
+                    </fieldset>
 
-            <h1 class="text-5xl font-bold text-emerald-800 mt-10 ml-50">
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Nome do curso<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="text" class="input" required>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Descrição<span class="text-red-500">*</span>
+                        </legend>
+                        <textarea class="input" required>
+
+                        </textarea>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Preço<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="text" class="input" required>
+                    </fieldset>
+                </form>
+            <button class="btn bg-[#335545] text-white border-none mt-8 w-full" @click="modal = false; aviso = true;">Cadastrar curso</button>
+        </div>
+    </section>
+    <button class="fixed bottom-8 right-8 btn rounded-lg bg-emerald-800 border-none text-white btn-lg" @click="modal = !modal">+</button>
+</div>
+
+<main class="flex flex-col flex-1 bg-base-50">
+
+    <div class="flex flex-col flex-1 gap-12 items-center">
+
+            <h1 class="text-5xl font-bold text-emerald-800 mt-10">
                 Cursos disponíveis
             </h1>
 
             <div class="flex flex-wrap items-center justify-center gap-10">
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
-                    <img
-                        src="imagenscursos/cursodeteatro.png"
-                        alt="Shoes" />
-                    </figure>
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
+                    <img src="assets/img/cursodeteatro.png" alt="Shoes" class="object-cover w-full h-48" />
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Teatro</h2>
                     <p>Introdução ao teatro para iniciantes: técnicas de interpretação, improvisação, dicção, expressão corporal e criação de personagens. Exercícios práticos e jogos teatrais. Ideal para quem quer se expressar nos palcos</p>
@@ -67,12 +104,11 @@
                     </div>
                 </div>
                 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodeartesanato.jpg"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodeartesanato.jpg"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Artesanato</h2>
                     <p>Introdução a tipos de artesanato, estilos, materiais e ferramentas: pintura em madeira ou tecido, bordado, crochê, tricô, macramê, costura criativa, biscuit, reciclagem, decoupage, papelaria artesanal etc. Produzição de itens decorativos, utilitários ou para presente.</p>
@@ -86,12 +122,11 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodeculinária.jpeg"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodeculinária.jpeg"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Culinária</h2>
                     <p>Manipulação correta dos alimentos, limpeza e organização da cozinha e uso correto de facas, panelas, fornos, batedeiras etc. Cortes, refogados, cozimentos, assados, frituras, molhos e temperos. Produção de receitas como pratos doces e/ou salgados, do simples ao mais elaborado.</p>
@@ -105,12 +140,11 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodeinformaticabasica.png"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodeinformaticabasica.png"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Informática básica</h2>
                     <p>Instrução sobre noções de hardware e software, operação do Windows/Linux, navegação na internet, uso de e-mail e ferramentas como Word, Excel e PowerPoint. Ideal para iniciantes. </p>
@@ -124,12 +158,11 @@
                     </div>
                 </div>
                 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodeprogramação.jpg"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodeprogramação.jpg"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Introdução à Lógica e Programação</h2>
                     <p>Aprendizado de fluxogramas, algoritmos, estruturas condicionais, loops e introdução a linguagens como Python. Prática com exercícios reais para resolver problemas lógicos. Ideal para iniciantes em TI. </p>
@@ -143,12 +176,11 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodeautoriaweb.jpg"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodeautoriaweb.jpg"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Autoria Web</h2>
                     <p>Estudo de HTML5 para estrutura, CSS3 para design responsivo (com Tailwind CSS), JavaScript básico para interatividade, e noções de acessibilidade e SEO. Projetos práticos para portfólio. Ideal para designers e desenvolvedores iniciantes. </p>
@@ -162,12 +194,11 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodedesign.png"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodedesign.png"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Design</h2>
                     <p>Estudo sobre a teoria das cores, tipografia, hierarquia, equilíbrio, contraste e composição. Prática com projetos para criar layouts impactantes e profissionais. Ideal para designers, artistas e criativos iniciantes. </p>
@@ -181,12 +212,11 @@
                     </div>
                 </div>
                 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursoderedesdecomputadores.jpg"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursoderedesdecomputadores.jpg"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Redes de Computadores</h2>
                     <p>Conhecimento sobre os fundamentos de redes: conceitos básicos, topologias, protocolos TCP/IP, configuração de LAN e segurança inicial. Prática com simulações. Ideal para iniciantes em TI. </p>
@@ -200,12 +230,11 @@
                     </div>
                 </div>
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
+                <div class="overflow-hidden card bg-base-100 w-1/4 h-140 shadow-2xl transition-transform duration-300 hover:scale-105">
                     <img
-                        src="imagenscursos/cursodePOO.png"
+                        class="object-cover w-full h-48"
+                        src="assets/img/cursodePOO.png"
                         alt="Shoes" />
-                    </figure>
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Programação Orientada a Objetos:</h2>
                     <p>Introdução à POO: classes, objetos, herança, polimorfixlo e encapsulamento em linguagens como Python ou Java. Exercícios práticos de projetos. Ideal para programadores intermediários. </p>
@@ -223,7 +252,7 @@
     
 </main>
 
-<footer></footer>
+<footer class="mt-10"></footer>
 
 </body>
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script type="module" src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body x-data="{}">
+    <div class="flex w-full">
+        <!-- Seção de registro -->
+        <section class="grow-1">
+            <div class="flex w-full h-screen items-center justify-center">
+                <div class="w-75 text-center text-white">
+                    <h1 class="text-[64px] font-bold mb-6 text-[#335545]">Novo por aqui?</h1>
+                    <p class="text-xl mb-8 text-[#021C0D]">Crie sua conta e tenha acesso a todo o nosso conteúdo</p>
+                    <button class="btn text-white bg-[#335545] border-none" @click="window.location.href = 'registro.html'">Registre-se</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de login -->
+        <section class="bg-[#345947] grow-2">
+            <div class="w-full h-screen flex flex-col justify-center items-center gap-8">
+
+                <h1 class="w-75 text-center text-white text-[64px] font-bold">Login</h1>
+
+                <form
+                    class="w-75"
+                    x-data="{ email: '', senha: '', error: '' }"
+                    @submit.prevent="Alpine.store('auth').login(email, senha) ? error = '' : error = 'Email ou senha inválidos'"
+                >
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend text-white">
+                            Endereço de email<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="email" class="input" x-model="email" required>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend text-white">
+                            Senha<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="password" class="input" x-model="senha" required>
+                    </fieldset>
+
+                    <p x-show="error" x-text="error" class="text-red-400 mt-2 text-sm"></p>
+
+                    <input type="submit" value="Login" class="btn bg-[#7B998B] text-white border-none mt-8 w-full">
+
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html> 

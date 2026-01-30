@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Título</title>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script type="module" src="script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body x-data="{}">
+    <div class="flex w-full"">
+        <!-- Seção de registro -->
+        <section class="grow-2">
+            <div class="w-full h-screen flex flex-col justify-center items-center gap-8">
+
+                <h1 class="w-75 text-center text-[#335545] text-[64px] font-bold">Registro</h1>
+
+                <form class="w-75">
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Nome completo<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="text" class="input" required>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Endereço de email<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="email" class="input" required>
+                    </fieldset>
+
+                    <fieldset class="fieldset">
+                        <legend class="fieldset-legend">
+                            Senha<span class="text-red-500">*</span>
+                        </legend>
+                        <input type="password" class="input" x-model="senha" required>
+                    </fieldset>
+
+                    <p x-show="error" x-text="error" class="text-red-500 mt-2 text-sm"></p>
+
+                    <input type="submit" value="Registre-se" class="btn bg-[#335545] text-white border-none mt-8 w-full">
+
+                </form>
+            </div>
+        </section>
+        
+        <!-- Seção de login -->
+        <section class="bg-[#345947] grow-1"">
+            <div class="flex w-full h-screen items-center justify-center">
+                <div class="w-75 text-center text-white">
+                    <h1 class="text-[64px] font-bold mb-6">Já possui uma conta?</h1>
+                    <p class="text-xl mb-8">Entre na sua conta e tenha acesso a todo o nosso conteúdo.</p>
+                    <button class="btn text-white bg-[#7B998B] border-none" @click="window.location.href = 'login.html'">Realizar login</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
