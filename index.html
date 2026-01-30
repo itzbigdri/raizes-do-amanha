@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raizes do Amanhã</title>
-    <script src="script.js"></script>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script type="module" src="script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-<header>
-    <div class="flex justify-between w-7xl py-4 mx-auto">
+<header x-data="{}">
+    <div class="flex justify-between w-7xl max-w-9/10 py-4 mx-auto">
         <a href="index.html"><img src="./assets/img/logo-raizes.png" alt=""></a>
 
         <div class="flex gap-16 items-center">
@@ -22,20 +22,14 @@
                 <a href="cursos.html">Cursos</a>
                 <a href="dashboard.html">Dashboard</a>
             </nav>
-
-            <!-- Interações Publicas -->
+            
+            <!-- Interações Admin -->
             <div class="flex justify-end flex-1 gap-8">
                 <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
-                    Entrar
+                    Acessar painel
                 </button>
-                <button class="btn bg-emerald-800 text-white font-bold">
-                    Registre-se
-                </button>
+                <img src="assets/icons/logout.svg" alt="" class="w-8">
             </div>
-
-            <!-- Interações Usuário -->
-             
-            <!-- Interações Admin -->
         </div>
     </div>
 </header>
@@ -65,7 +59,7 @@
             </section>
 
             <figure>
-                <img src="logopb.png" alt="">
+                <img src="assets/img/logopb.png" alt="">
             </figure>
         </div>
 

@@ -1,114 +1,31 @@
-// Importando dados
-import initialData from "./data";
+import initialData from 'data.js'
 
-// Chave do localStorage
-const DB_KEY = "appDB";
+const ROLE_KEY = "userRole";
 
-// Inicializando localStorage
-function initDB(key, data) {
-    if (!localStorage.getItem(key)) {
-        localStorage.setItem(key, JSON.stringify(data));
-    } else {
-        console.log(`LocalStorage "${key}" já existe`);
-    }
+// Retorna papel atual
+function getRole() {
+  return localStorage.getItem(ROLE_KEY) || "public";
 }
 
-// Pegando dados do localStorage
-function getDB(key) {
-  const data = localStorage.getItem(key);
-  return data ? JSON.parse(data) : null;
+// Define papel
+function setRole(role) {
+  localStorage.setItem(ROLE_KEY, role);
 }
 
-// Atualizando os dados do localStorage
-function updDB(key, data) {
-    if (!localStorage.getItem(key)){
-      initDB(key, data)
-    } else {
-      localStorage.setItem(key, JSON.stringify(data))
-    }
+// Logout
+function logout() {
+  localStorage.removeItem(ROLE_KEY);
 }
 
-// Adicionando items
-// User
-function addUser(user) {
-    const db = getDB(DB_KEY);
-    if (!db) return;
-
-    db.public_data.users.push(user);
-    updDB(DB_KEY, db);
+// Helpers
+function isPublic() {
+  return getRole() === "public";
 }
 
-// Curso
-function addCurso(curso) {
-    const db = getDB(DB_KEY);
-    if (!db) return;
-
-    db.public_data.cursos.push(curso);
-    updDB(DB_KEY, db);
+function isUser() {
+  return getRole() === "user";
 }
 
-// Produto
-function addProduto(produto) {
-    const db = getDB(DB_KEY);
-    if (!db) return;
-
-    db.public_data.produtos.push(produto);
-    updDB(DB_KEY, db);
+function isAdmin() {
+  return getRole() === "admin";
 }
-
-// itemCarrinho
-function addCarrinho(item) {
-    const db = getDB(DB_KEY);
-    if (!db) return;
-
-    db.public_data.carrinho.push(item);
-    updDB(DB_KEY, db);
-}
-
-// Criança
-function addCrianca(crianca) {
-    const db = getDB(DB_KEY);
-    if (!db) return;
-
-    db.public_data.criancas.push(crianca);
-    updDB(DB_KEY, db);
-}
-
-
-// Retornando as listas
-// Users
-function getUsers() {
-    const db = getDB(DB_KEY);
-    return db ? db.public_data.users : [];
-}
-
-// Cursos
-function getCursos() {
-    const db = getDB(DB_KEY);
-    return db ? db.public_data.cursos : [];
-}
-
-// Escolas
-function getEscolas() {
-    const db = getDB(DB_KEY);
-    return db ? db.public_data.escolas : [];
-}
-
-// Crianças
-function getCriancas() {
-    const db = getDB(DB_KEY);
-    return db ? db.public_data.criancas : [];
-}
-
-// Produtos
-function getProdutos() {
-    const db = getDB(DB_KEY);
-    return db ? db.public_data.produtos : [];
-}
-
-// Carrinho
-function getCarrinho() {
-    const db = getDB(DB_KEY);
-    return db ? db.public_data.carrinho : [];
-}
-
