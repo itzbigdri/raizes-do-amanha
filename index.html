@@ -1,178 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raizes do Amanhã</title>
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script type="module" src="script.js" defer></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raizes do Amanhã</title>
+<script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<script type="module" src="script.js" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="min-h-screen flex flex-col">
 
-<header x-data="{}">
-    <div class="flex justify-between w-7xl max-w-9/10 py-4 mx-auto">
-        <a href="index.html"><img src="./assets/img/logo-raizes.png" alt=""></a>
+<header>
+  <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto px-4 py-4 gap-4">
+    <a href="index.html"><img src="./assets/img/logo-raizes.png" class="w-32 mx-auto md:mx-0"></a>
 
-        <div class="flex gap-16 items-center">
-            <nav class="text-md text-[#335545] flex gap-8">
-                <a href="index.html">Início</a>
-                <a href="cursos.html">Cursos</a>
-                <a href="dashboard.html">Dashboard</a>
-            </nav>
-            
-            <!-- Interações Admin -->
-            <div class="flex justify-end flex-1 gap-8">
-                <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
-                    Acessar painel
-                </button>
-                <img src="assets/icons/logout.svg" alt="" class="w-8">
-            </div>
-        </div>
+    <nav class="flex flex-row gap-4 text-emerald-800 text-center">
+      <a href="index.html">Início</a>
+      <a href="cursos.html">Cursos</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="flex gap-4">
+      <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
+        Acessar painel
+      </button>
+      <img src="assets/icons/logout.svg" alt="" class="w-6">
     </div>
+  </div>
 </header>
 
 <main class="flex flex-col flex-1">
 
-    <div class="flex flex-col flex-1 text-emerald-800">
+<!-- BLOCO 1 -->
+<section class="flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-10 font-medium flex-1 text-emerald-800 text-center md:text-left">
+  <div class="flex flex-col gap-6 w-full md:w-2/5">
+    <p class="text-lg">Você já parou pra notar como o ensino funciona em diferentes regiões em Natal (RN)?</p>
+    <h1 class="text-3xl md:text-4xl font-bold">O projeto Raízes do Amanhã está aqui para trazer a transformação</h1>
+    <p>Em um contexto em que existem diversas tecnologias e estratégias capazes de reduzir os impactos da segregação socioespacial, o projeto propõe reunir esses recursos em um único ambiente, ampliando as oportunidades para estudantes e responsáveis. Dessa forma, nós buscamos viabilizar os estudos desses alunos e, sobretudo, melhorar a qualidade do aprendizado e da permanência nesses espaços acadêmicos e recreativos.</p>
+  </div>
 
-        <div class="flex flex-1 items-center justify-between px-10">
+  <figure class="mb-8 w-full max-w-xs md:max-w-sm">
+    <img src="assets/img/logopb.png" class="w-full">
+  </figure>
+</section>
 
-            <section class="flex flex-col gap-8 w-2/5">
-                <p class="text-xl font-medium">
-                    Você já parou pra notar como o ensino funciona em diferentes regiões em Natal (RN)?
-                </p>
+<svg class="text-emerald-800" viewBox="0 0 1440 156" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 29.6407L40 45.6407C80 61.6407 160 93.6407 240 88.3407C320 82.6407 400 40.6408 480 18.9408C560 -2.35925 640 -2.35925 720 2.94075C800 8.64075 880 18.6408 960 34.9408C1040 50.6408 1120 72.6407 1200 72.3407C1280 72.6407 1360 50.6407 1400 40.3407L1440 29.6407V157.641H1400C1360 157.641 1280 157.641 1200 157.641C1120 157.641 1040 157.641 960 157.641C880 157.641 800 157.641 720 157.641C640 157.641 560 157.641 480 157.641C400 157.641 320 157.641 240 157.641C160 157.641 80 157.641 40 157.641H0V29.6407Z"/>
+</svg>
 
-                <h1 class="text-4xl font-bold">
-                    O projeto Raízes do Amanhã está aqui para trazer a transformação
-                </h1>
+<!-- BLOCO 2 -->
+<section class="bg-emerald-800 text-white flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-10 font-medium flex-1 text-center md:text-left">
+  <figure class="mt-4 w-full max-w-sm">
+    <img src="assets/img/lorem.jpg" class="rounded-xl w-full">
+  </figure>
 
-                <div class="flex flex-col gap-2">
-                    <p>"Mas por qual motivo eu deveria me importar com isso?"</p>
+  <div class="flex flex-col gap-4 mb-4 w-full md:w-2/5">
+    <p>O IDEB é uma métrica que varia de zero a dez e considera a taxa de aprovação dos alunos aliada ao desempenho em Língua Portuguesa e Matemática, o país possui como meta alcançar indicadores como 6,0. Sabendo disso, ao analisar dados de 2023, observa-se que a região norte da capital registrou no geral, uma média de 4,6 nos anos iniciais do Ensino Fundamental e apenas 3,4 nos anos finais.</p>
+    <p>Essa realidade evidencia não apenas a queda na qualidade do ensino, mas também problemas estruturais e sociais que impactam diretamente o sistema educacional do nosso município.</p>
+  </div>
+</section>
 
-                    <p class="text-base">
-                        Em um contexto em que existem diversas tecnologias e estratégias capazes de reduzir os impactos da segregação socioespacial, o projeto propõe reunir esses recursos em um único ambiente, ampliando as oportunidades para estudantes e responsáveis. Dessa forma, nós buscamos viabilizar os estudos desses alunos e, sobretudo, melhorar a qualidade do aprendizado e da permanência nesses espaços acadêmicos e recreativos.
-                    </p>
-                </div>
-            </section>
+<svg class="text-emerald-800" viewBox="0 0 1440 158" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 128L40 112C80 96 160 64 240 69.3C320 75 400 117 480 138.7C560 160 640 160 720 154.7C800 149 880 139 960 122.7C1040 107 1120 85 1200 85.3C1280 85 1360 107 1400 117.3L1440 128V0H1400C1360 0 1280 0 1200 0C1120 0 1040 0 960 0C880 0 800 0 720 0C640 0 560 0 480 0C400 0 320 0 240 0C160 0 80 0 40 0H0V128Z"/>
+</svg>
 
-            <figure class="w-120">
-                <img src="assets/img/logopb.png" alt="">
-            </figure>
-        </div>
+<!-- BLOCO 3 -->
+<section class="flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-10 font-medium flex-1 text-emerald-800 text-center md:text-left">
+  <div class="flex flex-col gap-4 my-10 w-full md:w-2/5">
+    <p>Em contrapartida, a região sul da cidade, no geral, apresentou médias mais altas, em torno de 5,5, o que reforça a relação entre a desigualdade social e o desempenho escolar dos estudantes, consolidando a idéia que o desenvolvimento de uma pessoa não é apenas individual, mas também é influenciado pelo ambiente em que se encontra, situação socioeconômica e entre outros fatores sociais que afetam diretamente na qualidade de vida.</p>
+    <p>Além disso, é importante refletir que esse desempenho escolar não compromete apenas a aprendizagem dos estudantes, mas também limita suas oportunidades futuras.</p>
+  </div>
 
-        <svg class="text-emerald-800" viewBox="0 0 1440 156" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 29.6407L40 45.6407C80 61.6407 160 93.6407 240 88.3407C320 82.6407 400 40.6408 480 18.9408C560 -2.35925 640 -2.35925 720 2.94075C800 8.64075 880 18.6408 960 34.9408C1040 50.6408 1120 72.6407 1200 72.3407C1280 72.6407 1360 50.6407 1400 40.3407L1440 29.6407V157.641H1400C1360 157.641 1280 157.641 1200 157.641C1120 157.641 1040 157.641 960 157.641C880 157.641 800 157.641 720 157.641C640 157.641 560 157.641 480 157.641C400 157.641 320 157.641 240 157.641C160 157.641 80 157.641 40 157.641H0V29.6407Z"/>
-        </svg>
+  <figure class="mb- w-full max-w-sm">
+    <img src="assets/img/rankingimg.png" class="rounded-xl w-full">
+  </figure>
+</section>
 
-    </div>
+<svg class="text-emerald-800" viewBox="0 0 1440 156" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 29.6407L40 45.6407C80 61.6407 160 93.6407 240 88.3407C320 82.6407 400 40.6408 480 18.9408C560 -2.35925 640 -2.35925 720 2.94075C800 8.64075 880 18.6408 960 34.9408C1040 50.6408 1120 72.6407 1200 72.3407C1280 72.6407 1360 50.6407 1400 40.3407L1440 29.6407V157.641H1400C1360 157.641 1280 157.641 1200 157.641C1120 157.641 1040 157.641 960 157.641C880 157.641 800 157.641 720 157.641C640 157.641 560 157.641 480 157.641C400 157.641 320 157.641 240 157.641C160 157.641 80 157.641 40 157.641H0V29.6407Z"/>
+</svg>
 
-    <div class="flex flex-col flex-1 bg-emerald-800 text-white">
-        
-        <div class="flex flex-1 items-center justify-between px-10">
+<!-- BLOCO 4 -->
+<section class="bg-emerald-800 text-white flex items-center justify-center px-4 md:px-10 font-medium flex-1 text-center md:text-left">
+  <div class="flex flex-col gap-4 mb-10 w-full md:w-2/5">
+    <p>Diante das desigualdades educacionais observadas nas regiões periféricas da cidade de Natal, especialmente na Zona Norte, onde os indicadores educacionais permanecem abaixo da média nacional, o projeto Raízes do Amanhã apresenta-se como uma solução de caráter educacional, social e tecnológico. A proposta consiste na utilização da tecnologia e assistência social como metodologia pedagógica complementar, aplicada tanto em ambientes digitais quanto diretamente nas escolas e comunidades atendidas.</p>
+    <p>O projeto é direcionado a crianças e adolescentes de 6 a 12 anos, prioritariamente estudantes da rede pública de ensino, em situação de vulnerabilidade social e econômica, residentes em regiões periféricas da cidade de Natal (RN).</p>
+  </div>
+</section>
 
-            <section class="flex flex-col gap-4">
-
-                <figure class="shadow-xl transition-transform duration-300 hover:scale-105">
-                    <img class="rounded-xl" src="assets/img/lorem.jpg" alt="">
-                </figure>
-
-                <a href="https://blogdodina.com/educacao-publica-rn-natal-estagnada/" target="_blank" class="underline font-bold">Fonte: Blog do Dina (21/12/25)</a>
-            </section>
-
-            <section class="flex flex-col gap-8 w-2/5">
-                
-                <div class="flex flex-col gap-4">
-                    
-                    <p class="text-xl font-medium">
-                        O IDEB é uma métrica que varia de zero a dez e considera a taxa de aprovação dos alunos aliada ao desempenho em Língua Portuguesa e Matemática, o país possui como meta alcançar indicadores como 6,0. Sabendo disso, ao analisar dados de 2023, observa-se que a região norte da capital registrou no geral, uma média de 4,6 nos anos iniciais do Ensino Fundamental e apenas 3,4 nos anos finais. 
-                    </p>
-
-                    <p class="text-xl font-medium">
-                        Essa realidade evidencia não apenas a queda na qualidade do ensino, mas também problemas estruturais e sociais que impactam diretamente o sistema educacional do nosso município.
-                    </p>
-
-                </div>
-
-            </section>
-
-        </div>
-            
-    </div>
-
-    <svg class="text-emerald-800" viewBox="0 0 1440 158" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 128L40 112C80 96 160 64 240 69.3C320 75 400 117 480 138.7C560 160 640 160 720 154.7C800 149 880 139 960 122.7C1040 107 1120 85 1200 85.3C1280 85 1360 107 1400 117.3L1440 128V0H1400C1360 0 1280 0 1200 0C1120 0 1040 0 960 0C880 0 800 0 720 0C640 0 560 0 480 0C400 0 320 0 240 0C160 0 80 0 40 0H0V128Z"/>
-    </svg>
-
-    <div class="flex flex-col flex-1 text-emerald-800">
-        
-        <div class="flex flex-1 items-center justify-between px-10">
-
-            <section class="flex flex-col gap-8 w-2/5">
-                
-                <div class="flex flex-col gap-4">
-                    
-                    <p class="text-xl font-medium">
-                       Em contrapartida, a região sul da cidade, no geral, apresentou médias mais altas, em torno de 5,5, o que reforça a relação entre a desigualdade social e o desempenho escolar dos estudantes, consolidando a idéia que o desenvolvimento de uma pessoa não é apenas individual, mas também é influenciado pelo ambiente em que se encontra, situação socioeconômica e entre outros fatores sociais que afetam diretamente na qualidade de vida. 
-                    </p>
-
-                    <p class="text-xl font-medium">
-                        Além disso, é importante refletir que esse desempenho escolar não compromete apenas a aprendizagem dos estudantes, mas também limita suas oportunidades futuras.
-                    </p>
-
-                </div>
-
-            </section>
-
-            <section class="flex flex-col gap-4">
-
-                <figure class="w-90 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <img class="rounded-xl" src="assets/img/rankingimg.png" alt="">
-                </figure>
-
-                <a href="http://opotiguar.com.br/2026/01/26/natal-amarga-a-pior-educacao-entre-as-capitais-do-pais-em-ranking-de-competitividade-dos-municipios-2025" target="_blank" class="underline font-bold">Fonte: O Potiguar (26/01/26)</a>
-            </section>
-
-        </div>
-            
-    </div>
-
-    <svg class="text-emerald-800" viewBox="0 0 1440 156" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 29.6407L40 45.6407C80 61.6407 160 93.6407 240 88.3407C320 82.6407 400 40.6408 480 18.9408C560 -2.35925 640 -2.35925 720 2.94075C800 8.64075 880 18.6408 960 34.9408C1040 50.6408 1120 72.6407 1200 72.3407C1280 72.6407 1360 50.6407 1400 40.3407L1440 29.6407V157.641H1400C1360 157.641 1280 157.641 1200 157.641C1120 157.641 1040 157.641 960 157.641C880 157.641 800 157.641 720 157.641C640 157.641 560 157.641 480 157.641C400 157.641 320 157.641 240 157.641C160 157.641 80 157.641 40 157.641H0V29.6407Z"/>
-    </svg>
-
-    <div class="flex flex-col flex-1 bg-emerald-800 text-white">
-        
-        <div class="flex flex-1 items-center justify-center px-10 mb-20">
-
-            <section class="flex flex-col gap-8 w-2/5">
-                
-                <div class="flex flex-col gap-4">
-                    
-                    <p class="text-xl font-medium">
-                        Diante das desigualdades educacionais observadas nas regiões periféricas da cidade de Natal, especialmente na Zona Norte, onde os indicadores educacionais permanecem abaixo da média nacional, o projeto Raízes do Amanhã apresenta-se como uma solução de caráter educacional, social e tecnológico. A proposta consiste na utilização da tecnologia e assistência social como metodologia pedagógica complementar, aplicada tanto em ambientes digitais quanto diretamente nas escolas e comunidades atendidas.
-
-                    </p>
-
-                    <p class="text-xl font-medium">
-                        O projeto é direcionado a crianças e adolescentes de 6 a 12 anos, prioritariamente estudantes da rede pública de ensino, em situação de vulnerabilidade social e econômica, residentes em regiões periféricas da cidade de Natal (RN).
-                    </p>
-
-                </div>
-
-            </section>
-
-        </div>
-            
-    </div>
 </main>
 
-<footer class="footer sm:footer-horizontal footer-center text-emerald-800 p-8 font-bold">
-  <aside>
-    <p>Copyright © 2026 - All right reserved by Raizes do Amanhã</p>
-  </aside>
+<footer class="footer footer-center text-emerald-800 p-8 font-bold">
+  <p>Copyright © 2026 - All right reserved by Raizes do Amanhã</p>
 </footer>
 
 </body>
