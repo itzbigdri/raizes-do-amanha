@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel</title>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body x-data="{}">
+    <header x-data="{}">
+        <div class="flex justify-between w-7xl max-w-9/10 py-4 mx-auto">
+            <a href="index.html"><img src="./assets/img/logo-raizes.png" alt=""></a>
+
+            <div class="flex gap-16 items-center">
+                <nav class="text-md text-[#335545] flex gap-8">
+                    <a href="index.html">Início</a>
+                    <a href="cursos.html">Cursos</a>
+                    <a href="dashboard.html">Dashboard</a>
+                </nav>
+                
+                <!-- Interações Admin -->
+                <div class="flex justify-end flex-1 gap-8">
+                    <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold" @click="window.location.href = 'painel.html'">
+                        Acessar painel
+                    </button>
+                    <img src="assets/icons/logout.svg" alt="" class="w-8">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="mx-auto w-7xl max-9/10 pt-48">
+        <div class="flex gap-16 justify-center">
+            <section>
+                <div class="bg-white p-8 rounded-lg shadow-2xl">
+                    <h3 class="text-xl font-bold">Cadastre uma nova criança</h3>
+                    <form class="w-75">
+
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">
+                                    Nome da criança<span class="text-red-500">*</span>
+                                </legend>
+                                <input type="text" class="input" required>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">
+                                    Nome da escola<span class="text-red-500">*</span>
+                                </legend>
+                                <input type="text" class="input" required>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">
+                                    Nome do bairro<span class="text-red-500">*</span>
+                                </legend>
+                                <input type="text" class="input" required>
+                            </fieldset>
+                        </form>
+                    <button class="btn bg-[#335545] text-white border-none mt-8 w-full" @click="modal = false; aviso = true;">Cadastrar criança</button>
+                </div>
+            </section>
+            <section>
+                <div class="bg-white p-8 rounded-lg shadow-2xl">
+                    <h3 class="text-xl font-bold">Cadastre uma nova escola</h3>
+                    <form class="w-75">
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">
+                                    Nome da escola<span class="text-red-500">*</span>
+                                </legend>
+                                <input type="text" class="input" required>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">
+                                    Nome do bairro<span class="text-red-500">*</span>
+                                </legend>
+                                <input type="text" class="input" required>
+                            </fieldset>
+
+                            <fieldset class="fieldset">
+                                <legend class="fieldset-legend">
+                                    Descrição<span class="text-red-500">*</span>
+                                </legend>
+                                <input type="text" class="input" required>
+                            </fieldset>
+                        </form>
+                    <button class="btn bg-[#335545] text-white border-none mt-8 w-full" @click="modal = false; aviso = true;">Cadastrar escola</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
