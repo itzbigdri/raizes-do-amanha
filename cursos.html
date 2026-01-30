@@ -11,27 +11,25 @@
 
 <body class="min-h-screen flex flex-col">
 
-<header class="flex items-center p-2">
-    <div class="flex flex-1">
-        <img src="img/logo.png" alt="">
-    </div>
+<header x-data="{}">
+    <div class="flex justify-between w-7xl max-w-9/10 py-4 mx-auto">
+        <a href="index.html"><img src="./assets/img/logo-raizes.png" alt=""></a>
 
-    <nav class="flex text-xl gap-10 justify-center flex-1 font-bold text-emerald-800">
-        <a href="#">Início</a>
-        <a href="#">Cursos</a>
-        <a href="#">Dashboard</a>
-    </nav>
-
-    <div class="flex justify-end flex-1 gap-2">
-
-        <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
-            Entrar
-        </button>
-
-        <button class="btn bg-emerald-800 text-white font-bold">
-            Registre-se
-        </button>
-
+        <div class="flex gap-16 items-center">
+            <nav class="text-md text-[#335545] flex gap-8">
+                <a href="index.html">Início</a>
+                <a href="cursos.html">Cursos</a>
+                <a href="dashboard.html">Dashboard</a>
+            </nav>
+            
+            <!-- Interações Admin -->
+            <div class="flex justify-end flex-1 gap-8">
+                <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
+                    Acessar painel
+                </button>
+                <img src="assets/icons/logout.svg" alt="" class="w-8">
+            </div>
+        </div>
     </div>
 </header>
 
@@ -45,12 +43,8 @@
 
             <div class="flex flex-wrap items-center justify-center gap-10">
 
-                <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
-                    <figure class="h-48 overflow-hidden">
-                    <img
-                        src="assets/img/cursodeteatro.png"
-                        alt="Shoes" />
-                    </figure>
+                <div class="bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
+                    <img src="assets/img/cursodeteatro.png" alt="Shoes" class="rounded-t-xl object-cover w-full h-48" />
                     <div class="card-body">
                     <h2 class="font-bold card-title">Curso de Teatro</h2>
                     <p>Introdução ao teatro para iniciantes: técnicas de interpretação, improvisação, dicção, expressão corporal e criação de personagens. Exercícios práticos e jogos teatrais. Ideal para quem quer se expressar nos palcos</p>
@@ -67,6 +61,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodeartesanato.jpg"
                         alt="Shoes" />
                     </figure>
@@ -86,6 +81,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodeculinária.jpeg"
                         alt="Shoes" />
                     </figure>
@@ -105,6 +101,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodeinformaticabasica.png"
                         alt="Shoes" />
                     </figure>
@@ -124,6 +121,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodeprogramação.jpg"
                         alt="Shoes" />
                     </figure>
@@ -143,6 +141,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodeautoriaweb.jpg"
                         alt="Shoes" />
                     </figure>
@@ -162,6 +161,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodedesign.png"
                         alt="Shoes" />
                     </figure>
@@ -181,6 +181,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursoderedesdecomputadores.jpg"
                         alt="Shoes" />
                     </figure>
@@ -200,6 +201,7 @@
                 <div class="card bg-base-100 w-1/4 h-120 shadow-xl transition-transform duration-300 hover:scale-105">
                     <figure class="h-48 overflow-hidden">
                     <img
+                        class="object-cover w-full h-48"
                         src="assets/img/cursodePOO.png"
                         alt="Shoes" />
                     </figure>
