@@ -21,7 +21,7 @@
                 
                 <!-- Interações Admin -->
                 <div class="flex justify-end flex-1 gap-8">
-                    <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold">
+                    <button class="btn bg-white border-2 border-emerald-800 text-emerald-800 font-bold" @click="window.location.href = 'painel.html'">
                         Acessar painel
                     </button>
                     <img src="assets/icons/logout.svg" alt="" class="w-8">
@@ -30,7 +30,7 @@
         </div>
     </header>
 
-    <main class="max-w-9/10 mx-auto">
+    <main class="max-w-9/10 mx-auto mt-16">
         <div class="flex gap-8">
             <article class="p-8 border-2 border-zinc-500 rounded-lg text-center min-w-2/10">
                 <h3 class="text-lg font-semibold mb-6">Qtd. de crianças</h3>
@@ -49,6 +49,40 @@
             <article class="p-8 border-2 border-zinc-500 rounded-lg text-center min-w-2/10">
                 <h3 class="text-lg font-semibold mb-6">Qtd. de escolas parceiras</h3>
                 <p class="text-5xl font-bold">12</p>
+            </article>
+        </div>
+        <div class="flex gap-8 mt-16">
+            <article class="p-8 border-2 border-zinc-500 rounded-lg text-center grow min-w-4/10">
+                <h3 class="text-lg font-semibold mb-6">Média de idade das crianças</h3>
+                <p class="text-5xl font-bold">8 anos</p>
+            </article>
+
+            <article class="p-8 border-2 border-zinc-500 rounded-lg grow text-center">
+                <h3 class="text-lg font-semibold mb-6">Aumento de desempenho</h3>
+                <p class="text-5xl font-bold mb-6">147%</p>
+            </article>
+        </div>
+        <div class="flex gap-8 mt-16">
+            <article class="p-8 border-2 border-zinc-500 rounded-lg grow-3 text-center">
+                <h3 class="text-lg font-semibold mb-6">Procurar por informática</h3>
+                <p class="text-5xl font-bold mb-6">38%</p>
+                <div class="w-full h-4 bg-zinc-500">
+                    <div class="w-38/100 h-4 bg-emerald-800"></div>
+                </div>
+            </article>
+            <article class="p-8 border-2 border-zinc-500 rounded-lg grow-3 text-center">
+                <h3 class="text-lg font-semibold mb-6">Procura por marketing</h3>
+                <p class="text-5xl font-bold mb-6">43%</p>
+                <div class="w-full h-4 bg-zinc-500">
+                    <div class="w-43/100 h-4 bg-emerald-800"></div>
+                </div>
+            </article>
+            <article class="p-8 border-2 border-zinc-500 rounded-lg grow-3 text-center">
+                <h3 class="text-lg font-semibold mb-6">Procura por artes</h3>
+                <p class="text-5xl font-bold mb-6">19%</p>
+                <div class="w-full h-4 bg-zinc-500">
+                    <div class="w-19/100 h-4 bg-emerald-800"></div>
+                </div>
             </article>
         </div>
     </main>
